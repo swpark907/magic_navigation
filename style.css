@@ -14,6 +14,7 @@ li{
 }
 
 .nav{
+  
   background-color: white;
   width: 700px;
   height: 100px;
@@ -26,6 +27,10 @@ li{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.nav ul li a:visited{
+  color: black;
 }
 
 .nav ul{
@@ -93,7 +98,7 @@ li{
 
 .indicator{
   position: absolute;
-  top: -40%;
+  top: -68px;
   z-index: -1;
   width: 136px;
   height: 136px;
@@ -101,4 +106,3 @@ li{
   border: 8px solid var(--clr);
   background-color: #29fd53;
 }
-
