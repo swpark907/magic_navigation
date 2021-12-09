@@ -14,7 +14,6 @@ li{
 }
 
 .nav{
-  
   background-color: white;
   width: 700px;
   height: 100px;
@@ -23,7 +22,7 @@ li{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -98,11 +97,13 @@ li{
 
 .indicator{
   position: absolute;
-  top: -68px;
+  top: -100%;
+  left: 0;
   z-index: -1;
   width: 136px;
   height: 136px;
   border-radius: 50%;
   border: 8px solid var(--clr);
   background-color: #29fd53;
+  transition: 0.5s;
 }
