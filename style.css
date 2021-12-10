@@ -122,3 +122,29 @@ li{
   background-color: #29fd53;
   transition: 0.5s;
 }
+
+.indicator::before{
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  left: -14px;
+  border: none;
+  border-top-right-radius: 35px;
+  background-color: transparent;
+  box-shadow: 0px -8px 0 0 var(--clr);
+  width: 26px;
+  height: 25px;
+}
+
+.indicator::after{
+  content: '';
+  position: absolute;
+  bottom: 5px;
+  right: -14px;
+  border: none;
+  border-top-left-radius: 35px;
+  background-color: white;
+  box-shadow: 0px -8px 0 0 var(--clr);
+  width: 26px;
+  height: 25px;
+}
