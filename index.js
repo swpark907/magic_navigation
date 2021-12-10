@@ -4,34 +4,22 @@ const indicator = document.querySelector('.indicator');
 let index = 0;
 
 
+function activeLink () {
+  navItem.forEach(item => {
+    item.classList.remove('active')
+    this.classList.add('active');
+  })
+}
 
-nav.addEventListener('click', e => {
-  console.log(e.target.className)
-  if(e.currentTarget.className === 'nav-item'){
-    navItem.forEach(item => {
-      item.classList.remove('active')
-    })
-    e.target.classList.add('active');
-
-    navItem.forEach(i =>  {
-      if(i.className.includes('active')){
-        // console.log(navItem.indexOf.call(i))
-        index = Array.prototype.indexOf.call(navItem, i)
-      }
-    })
-    indicator.style.left = `${141.5*index}px`;
-  }
+navItem.forEach(i => {
+  i.addEventListener('click', activeLink)
 })
 
-console.log(navItem);
-
-
-
-
-
-
-// navItem.forEach(item => {
-//   item.onclick = e => {
-//     console.log(e.target)
-//   }
-// })
+nav.addEventListener('click', e => {
+  navItem.forEach(i =>  {
+    if(i.className.includes('active')){
+      index = Array.prototype.indexOf.call(navItem, i)
+    }
+  })
+  indicator.style.transform = `translateX(${134.5*index}px)`;
+})
